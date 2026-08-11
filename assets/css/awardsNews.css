@@ -20,6 +20,7 @@ background-position: center;
 /* CARD */
 
 .award__card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: relative;
   border-radius: 22px;
   overflow: hidden;
