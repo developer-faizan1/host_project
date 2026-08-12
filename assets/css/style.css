@@ -411,11 +411,15 @@ hr {
   background: #f4a300;
 }
 
+.upcoming{
+background-color: #f4a300;
+}
+
 .project-content {
   padding: 25px;
 }
 
-.project-number{
+.project-number {
   font-size: 1.4rem;
   font-family: Poppins;
   color: var(--black-2);
@@ -453,7 +457,7 @@ hr {
 
 .link:hover {
   gap: 18px;
-  color: #23838A;
+  color: #23838a;
   text-decoration: underline;
 }
 
@@ -811,10 +815,10 @@ RIGHT CARDS
           For Tablet Devices
 ===================================*/
 
-@media(max-width: 1060px){
+@media (max-width: 1060px) {
   .project-grid {
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-}
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
 
 @media (max-width: 992px) {
@@ -898,20 +902,18 @@ RIGHT CARDS
 ===================================*/
 
 @media (max-width: 768px) {
-
   .explore__btn {
- 
-  padding: 1rem 1.6rem;
-  background: var(--green-1);
-  
-  font-size: 1.3rem;
-  font-family: Poppins;
-  border-radius: 4px;
-  overflow: hidden;
-  isolation: isolate;
-  transition: 0.3s;
-  text-transform: uppercase;
-}
+    padding: 1rem 1.6rem;
+    background: var(--green-1);
+
+    font-size: 1.3rem;
+    font-family: Poppins;
+    border-radius: 4px;
+    overflow: hidden;
+    isolation: isolate;
+    transition: 0.3s;
+    text-transform: uppercase;
+  }
   /* Our Services */
   .our__services__wrapper {
     gap: 3rem;
@@ -955,7 +957,7 @@ RIGHT CARDS
   }
 
   /*  Our Projects */
- 
+
   .our__project__portfolio h3 {
     font-size: 1.4rem;
   }
@@ -1135,5 +1137,13 @@ RIGHT CARDS
 
   .about__card p {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 377px) {
+  .explore__btn {
+    padding: 0.9rem 0.8rem;
+    color: #fff;
+    font-size: 1.2rem;
   }
 }

@@ -38,18 +38,19 @@ background-position: center;
   margin-bottom: 6rem;
   max-width: 600px;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: var(--black-3);
 }
 
 .certificates__items__wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
 
 .certificates__items {
-  width: 400px;
+  width: 350px;
   height: 400px;
   overflow: hidden;
 }

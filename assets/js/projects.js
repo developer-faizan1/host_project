@@ -130,6 +130,8 @@ function displayProjects() {
   projectContainer.appendChild(card);
 });
 }
+
+// pagination
 function createPagination() {
   pagination.innerHTML = "";
 
@@ -217,7 +219,7 @@ function createPageButton(page) {
     currentPage = page;
     displayProjects();
     createPagination();
-    window.scrollTo({ top: 500, behavior: "smooth" });
+    window.scrollTo({ top: 800, behavior: "smooth" });
   });
 
   return btn;
@@ -274,17 +276,6 @@ function applyFilters() {
       searchText === "" || searchableText.includes(searchText);
     return categoryMatch && locationMatch && statusMatch && searchMatch;
   });
-
-  // Sorting
-  // if (selectedSort === "Latest") {
-  //   filteredProjects.sort((a, b) => b.year - a.year);
-  // } else if (selectedSort === "Oldest") {
-  //   filteredProjects.sort((a, b) => a.year - b.year);
-  // } else {
-  //   filteredProjects = filteredProjects.filter(
-  //     (project) => project.year == selectedSort,
-  //   );
-  // }
 
   currentPage = 1;
 

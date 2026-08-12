@@ -19,7 +19,7 @@
 .about-section {
   width: 100%;
   padding: 120px 0;
-  background: #f8faf8;
+  background: #fff;
   overflow: hidden;
 }
 
@@ -898,6 +898,18 @@
     right: -150px;
     top: 400px;
     opacity: 0.12;
+  }
+}
+
+@media (max-width: 770px){
+  .ceo-image-bg{
+    display: none;
+  }
+}
+
+@media (max-width: 665px){
+  .ceo-image-bg{
+    display: block;
   }
 }
 
