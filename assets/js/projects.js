@@ -4,7 +4,6 @@
 
 const projectContainer = document.getElementById("projectContainer");
 const pagination = document.getElementById("pagination");
-const locationFilter = document.getElementById("locationFilter");
 const categoryButtons = document.querySelectorAll(".category");
 const statusFilter = document.getElementById("statusFilter");
 let selectedSort = "Latest";
@@ -16,7 +15,6 @@ let searchTimeout;
 // ===============================
 let searchText = "";
 let selectedCategory = "All";
-let selectedLocation = "All";
 let selectedStatus = "All";
 let projects = [];
 let filteredProjects = [];
@@ -131,95 +129,199 @@ function displayProjects() {
 });
 }
 
-// pagination
+// ================================
+// PAGINATION
+// ================================
 function createPagination() {
   pagination.innerHTML = "";
 
   const totalPages = Math.ceil(filteredProjects.length / cardsPerPage);
 
-  // Previous Button
+  // Hide pagination if only one page
+  if (totalPages <= 1) {
+    pagination.style.display = "none";
+    return;
+  }
+
+  pagination.style.display = "flex";
+
+  const isMobile = window.innerWidth <= 600;
+  const maxVisible = isMobile ? 3 : 5;
+
+  // ================================
+  // PREVIOUS BUTTON
+  // ================================
   const prevBtn = document.createElement("button");
+
+  prevBtn.className = "pagination-arrow";
   prevBtn.innerHTML = "&larr;";
   prevBtn.disabled = currentPage === 1;
+  prevBtn.setAttribute("aria-label", "Previous page");
 
   prevBtn.addEventListener("click", () => {
     if (currentPage > 1) {
       currentPage--;
+
       displayProjects();
       createPagination();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   });
 
   pagination.appendChild(prevBtn);
 
-  const maxVisible = 5;
+  // ================================
+  // CREATE PAGE LIST
+  // ================================
+  let pages = [];
 
-  let start = Math.max(1, currentPage - 2);
-  let end = Math.min(totalPages, start + maxVisible - 1);
+  // If total pages are small enough,
+  // show all pages
+  if (totalPages <= maxVisible) {
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push(i);
+    }
+  } else {
+    // =================================
+    // DESKTOP
+    // =================================
+    if (!isMobile) {
+      if (currentPage <= 3) {
+        // Example:
+        // 1 2 3 4 5 ... 20
+        pages = [1, 2, 3, 4, 5, "...", totalPages];
+      } else if (currentPage >= totalPages - 2) {
+        // Example:
+        // 1 ... 16 17 18 19 20
+        pages = [
+          1,
+          "...",
+          totalPages - 4,
+          totalPages - 3,
+          totalPages - 2,
+          totalPages - 1,
+          totalPages,
+        ];
+      } else {
+        // Example:
+        // 1 ... 7 8 9 ... 20
+        pages = [
+          1,
+          "...",
+          currentPage - 1,
+          currentPage,
+          currentPage + 1,
+          "...",
+          totalPages,
+        ];
+      }
+    }
 
-  if (end - start < maxVisible - 1) {
-    start = Math.max(1, end - maxVisible + 1);
-  }
-
-  // First page
-  if (start > 1) {
-    pagination.appendChild(createPageButton(1));
-
-    if (start > 2) {
-      const dots = document.createElement("span");
-      dots.textContent = "...";
-      pagination.appendChild(dots);
+    // =================================
+    // MOBILE
+    // =================================
+    else {
+      if (currentPage === 1) {
+        // 1 2 3 ... 20
+        pages = [1, 2, 3, "...", totalPages];
+      } else if (currentPage === totalPages) {
+        // 1 ... 18 19 20
+        pages = [
+          1,
+          "...",
+          totalPages - 2,
+          totalPages - 1,
+          totalPages,
+        ];
+      } else {
+        // 1 ... 8 ... 20
+        pages = [
+          1,
+          "...",
+          currentPage,
+          "...",
+          totalPages,
+        ];
+      }
     }
   }
 
-  // Middle pages
-  for (let i = start; i <= end; i++) {
-    pagination.appendChild(createPageButton(i));
-  }
-
-  // Last page
-  if (end < totalPages) {
-    if (end < totalPages - 1) {
+  // ================================
+  // CREATE PAGE BUTTONS
+  // ================================
+  pages.forEach((page) => {
+    if (page === "...") {
       const dots = document.createElement("span");
+
+      dots.className = "pagination-dots";
       dots.textContent = "...";
+
       pagination.appendChild(dots);
+
+      return;
     }
 
-    pagination.appendChild(createPageButton(totalPages));
-  }
+    pagination.appendChild(createPageButton(page));
+  });
 
-  // Next Button
+  // ================================
+  // NEXT BUTTON
+  // ================================
   const nextBtn = document.createElement("button");
+
+  nextBtn.className = "pagination-arrow";
   nextBtn.innerHTML = "&rarr;";
   nextBtn.disabled = currentPage === totalPages;
+  nextBtn.setAttribute("aria-label", "Next page");
 
   nextBtn.addEventListener("click", () => {
     if (currentPage < totalPages) {
       currentPage++;
+
       displayProjects();
       createPagination();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   });
 
   pagination.appendChild(nextBtn);
 }
 
+
+// ================================
+// PAGE BUTTON
+// ================================
 function createPageButton(page) {
   const btn = document.createElement("button");
 
+  btn.className = "pagination-page";
   btn.textContent = page;
 
   if (page === currentPage) {
     btn.classList.add("active");
+    btn.setAttribute("aria-current", "page");
   }
 
   btn.addEventListener("click", () => {
+    if (page === currentPage) return;
+
     currentPage = page;
+
     displayProjects();
     createPagination();
-    window.scrollTo({ top: 800, behavior: "smooth" });
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   });
 
   return btn;
@@ -231,11 +333,10 @@ function createPageButton(page) {
 
 function resetFilters() {
   selectedCategory = "All";
-  selectedLocation = "All";
   selectedStatus = "All";
   searchText = "";
 
-  locationFilter.value = "All";
+  
   statusFilter.value = "All";
   searchInput.value = "";
 
@@ -249,11 +350,13 @@ function resetFilters() {
 
 function applyFilters() {
   filteredProjects = projects.filter((project) => {
-    const categoryMatch =
-      selectedCategory === "All" || project.projectType === selectedCategory;
-
-    const locationMatch =
-      selectedLocation === "All" || project.city === selectedLocation;
+   const categoryMatch =
+  selectedCategory === "All" ||
+  project.projectType === selectedCategory ||
+  (
+    project.projectType === "Commercial & Residential" &&
+    ["Commercial", "Residential"].includes(selectedCategory)
+  );
 
     const statusMatch =
       selectedStatus === "All" || project.status === selectedStatus;
@@ -274,7 +377,7 @@ function applyFilters() {
 
     const searchMatch =
       searchText === "" || searchableText.includes(searchText);
-    return categoryMatch && locationMatch && statusMatch && searchMatch;
+    return categoryMatch  && statusMatch && searchMatch;
   });
 
   currentPage = 1;
@@ -301,15 +404,6 @@ categoryButtons.forEach((button) => {
 
     applyFilters();
   });
-});
-
-// Location
-locationFilter.addEventListener("change", function () {
-  selectedLocation = this.value;
-  if (selectedLocation === "All") {
-    resetFilters();
-  }
-  applyFilters();
 });
 
 // Status

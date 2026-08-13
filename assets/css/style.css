@@ -464,27 +464,48 @@ background-color: #f4a300;
 /* Pagination */
 
 .pagination {
-  margin-top: 45px;
+  /* margin-top: 45px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 10px; */
+
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  margin-top: 50px;
+  width: 100%;
 }
 
 .pagination button {
   width: 45px;
   height: 45px;
-
   border: 1px solid #ddd;
   background: #fff;
-
   border-radius: 10px;
   cursor: pointer;
-
   font-size: 16px;
   transition: 0.3s;
+ 
+}
+.pagination button:hover:not(:disabled) {
+  border-color: #176d73;
+  color: #176d73;
 }
 
-.pagination button:hover {
+.pagination button.active {
+  background: #176d73;
+  border-color: #176d73;
+  color: #fff;
+}
+
+.pagination button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* .pagination button:hover {
   background-color: var(--green-1);
   color: #fff;
 }
@@ -493,7 +514,7 @@ background-color: #f4a300;
   background-color: var(--green-1);
   color: #fff;
   border-color: var(--green-1);
-}
+} */
 
 /* project not found */
 .no-projects {

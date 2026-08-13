@@ -36,7 +36,8 @@ section {
 :root {
 	--green-1: #196469;
 	--green-2: #a2de96;
-	--lightGreen-1: #d6e5d8;
+	/* --lightGreen-1: #d6e5d8; */
+	--lightGreen-1: #F0F9F3;
 	--black-1: #3b413a;
 	--black-2: #3f3c3c;
 	--black-3: #5b6359;

@@ -274,33 +274,24 @@ nav svg {
   }
 }
 
-
 /* scroll button */
 .scroll-top {
   position: fixed;
   right: 30px;
   bottom: 30px;
-
   width: 56px;
   height: 56px;
-
   border: none;
   border-radius: 50%;
-
   background: var(--lightGreen-2);
   color: var(--green-1);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
   z-index: 9999;
-
   padding: 0;
-
   box-shadow: 0 6px 20px rgba(25, 100, 105, 0.15);
-
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -310,17 +301,14 @@ nav svg {
 .progress-ring {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   transform: rotate(-90deg);
 }
 
 /* Background Ring */
 .progress-ring-bg {
   fill: none;
-
   stroke: var(--lightGreen-1);
   stroke-width: 3;
 }
@@ -328,15 +316,11 @@ nav svg {
 /* Scroll Progress */
 .progress-ring-progress {
   fill: none;
-
   stroke: var(--green-1);
   stroke-width: 3;
-
   stroke-linecap: round;
-
   stroke-dasharray: 131.95;
   stroke-dashoffset: 131.95;
-
   transition: stroke-dashoffset 0.1s linear;
 }
 
@@ -344,21 +328,16 @@ nav svg {
 .scroll-arrow {
   position: relative;
   z-index: 2;
-
   color: var(--green-1);
-
   font-size: 20px;
   font-weight: 500;
-
   line-height: 1;
-
   transition: transform 0.3s ease;
 }
 
 /* Hover */
 .scroll-top:hover {
   transform: translateY(-4px);
-
   box-shadow: 0 10px 25px rgba(25, 100, 105, 0.22);
 }
 
@@ -371,7 +350,6 @@ nav svg {
   .scroll-top {
     width: 50px;
     height: 50px;
-
     right: 20px;
     bottom: 20px;
   }
@@ -417,7 +395,7 @@ footer {
 }
 .footer__socials a {
   padding: 0.5rem 0.8rem;
-  background-color: var(--white-1);
+  background-color: #fff;
   border: 1px solid var(--green-2);
   border-radius: 8px;
 }
@@ -428,13 +406,14 @@ footer {
 .footer__text__title {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: var(--black-1);
+  color: var(--black-2);
   font-weight: 600;
 }
+
 .footer__text a {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
-  color: var(--black-2);
+  color: var(--black-3);
   font-family: Raleway;
   font-weight: 500;
   line-height: 1.4em;
@@ -489,7 +468,7 @@ footer {
     margin-bottom: 2rem;
   }
   .footer__text a {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
   }
 }
