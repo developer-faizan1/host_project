@@ -1,0 +1,924 @@
+<section class="contact-section">
+  <div class="contact-wrapper">
+
+    <!-- =====================================
+         LEFT INFORMATION PANEL
+    ====================================== -->
+    <div class="contact-info">
+
+      <div class="mail-icon">
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+          <path d="m3 7 9 6 9-6"></path>
+        </svg>
+      </div>
+
+      <h1>Send Us a Message</h1>
+
+      <p class="intro">
+        We're here to help and answer any question you might have.
+        We look forward to hearing from you.
+      </p>
+
+      <div class="green-line"></div>
+
+      <!-- Office -->
+      <div class="contact-item">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+            <circle cx="12" cy="10" r="2.5"></circle>
+          </svg>
+        </div>
+
+        <div>
+          <h3>Our Office</h3>
+          <p>
+            123 Business Avenue,<br>
+            Dubai, UAE
+          </p>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="contact-item">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2
+              19.79 19.79 0 0 1-8.63-3.07
+              19.5 19.5 0 0 1-6-6
+              19.79 19.79 0 0 1-3.07-8.67
+              A2 2 0 0 1 4.11 2h3
+              a2 2 0 0 1 2 1.72
+              12.84 12.84 0 0 0 .7 2.81
+              2 2 0 0 1-.45 2.11L8.09 9.91
+              a16 16 0 0 0 6 6l1.27-1.27
+              a2 2 0 0 1 2.11-.45
+              12.84 12.84 0 0 0 2.81.7
+              A2 2 0 0 1 22 16.92z"
+            ></path>
+          </svg>
+        </div>
+
+        <div>
+          <h3>Call Us</h3>
+          <p>+971 50 123 4567</p>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-item">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="m3 7 9 6 9-6"></path>
+          </svg>
+        </div>
+
+        <div>
+          <h3>Email Us</h3>
+          <p>info@company.com</p>
+        </div>
+      </div>
+
+      <!-- Working Hours -->
+      <div class="contact-item">
+        <div class="contact-item-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"></circle>
+            <polyline points="12 7 12 12 15 14"></polyline>
+          </svg>
+        </div>
+
+        <div>
+          <h3>Working Hours</h3>
+          <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+
+      <!-- Decorative Building -->
+      <div class="city-decoration">
+        <div class="building building-1"></div>
+        <div class="building building-2"></div>
+        <div class="building building-3"></div>
+        <div class="building building-4"></div>
+        <div class="building building-5"></div>
+      </div>
+
+    </div>
+
+
+    <!-- =====================================
+         RIGHT FORM
+    ====================================== -->
+    <div class="contact-form">
+
+      <form
+        id="contactForm"
+        action="contact.php"
+        method="POST"
+        novalidate
+      >
+
+        <!-- Name + Email -->
+        <div class="form-row">
+
+          <!-- Name -->
+          <div class="form-group">
+
+            <label for="name">
+              Name <span class="required">*</span>
+            </label>
+
+            <div class="input-wrapper">
+
+              <div class="input-icon">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="8" r="3"></circle>
+                  <path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"></path>
+                </svg>
+              </div>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                maxlength="80"
+                autocomplete="name"
+                required
+              >
+
+            </div>
+
+            <small class="error-message" id="nameError"></small>
+
+          </div>
+
+
+          <!-- Email -->
+          <div class="form-group">
+
+            <label for="email">
+              Email <span class="required">*</span>
+            </label>
+
+            <div class="input-wrapper">
+
+              <div class="input-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="m3 7 9 6 9-6"></path>
+                </svg>
+              </div>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                maxlength="120"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+            <small class="error-message" id="emailError"></small>
+
+          </div>
+
+        </div>
+
+
+        <!-- Phone + Subject -->
+        <div class="form-row">
+
+          <!-- Phone -->
+          <div class="form-group">
+
+            <label for="phone">
+              Phone <span class="required">*</span>
+            </label>
+
+            <div class="input-wrapper">
+
+              <div class="input-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2
+                    19.79 19.79 0 0 1-8.63-3.07
+                    19.5 19.5 0 0 1-6-6
+                    19.79 19.79 0 0 1-3.07-8.67
+                    A2 2 0 0 1 4.11 2h3
+                    a2 2 0 0 1 2 1.72
+                    12.84 12.84 0 0 0 .7 2.81
+                    2 2 0 0 1-.45 2.11L8.09 9.91
+                    a16 16 0 0 0 6 6l1.27-1.27
+                    a2 2 0 0 1 2.11-.45
+                    12.84 12.84 0 0 0 2.81.7
+                    A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+              </div>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                maxlength="20"
+                autocomplete="tel"
+                required
+              >
+
+            </div>
+
+            <small class="error-message" id="phoneError"></small>
+
+          </div>
+
+
+          <!-- Subject -->
+          <div class="form-group">
+
+            <label for="subject">
+              Subject <span class="required">*</span>
+            </label>
+
+            <div class="input-wrapper">
+
+              <div class="input-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="m4 20 4.5-1 11-11
+                    a2.1 2.1 0 0 0-3-3l-11 11L4 20Z"
+                  ></path>
+                  <path d="m14.5 6.5 3 3"></path>
+                </svg>
+              </div>
+
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Write the subject"
+                maxlength="150"
+                required
+              >
+
+            </div>
+
+            <small class="error-message" id="subjectError"></small>
+
+          </div>
+
+        </div>
+
+
+        <!-- Department -->
+        <div class="form-group department-group">
+
+          <label for="department">
+            Department <span class="required">*</span>
+          </label>
+
+          <div class="input-wrapper select-wrapper">
+
+            <div class="input-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 21V4h16v17"></path>
+                <path d="M8 8h2"></path>
+                <path d="M14 8h2"></path>
+                <path d="M8 12h2"></path>
+                <path d="M14 12h2"></path>
+                <path d="M9 21v-4h6v4"></path>
+              </svg>
+            </div>
+
+            <select
+              id="department"
+              name="department"
+              required
+            >
+
+              <option value="" selected disabled>
+                Select a Department
+              </option>
+
+              <option value="HR">HR</option>
+              <option value="Tender">Tender</option>
+              <option value="Account">Account</option>
+              <option value="General">General</option>
+
+            </select>
+
+          </div>
+
+          <small
+            class="error-message"
+            id="departmentError"
+          ></small>
+
+        </div>
+
+
+        <!-- Message -->
+        <div class="form-group message-group">
+
+          <label for="message">
+            Message <span class="required">*</span>
+          </label>
+
+          <div class="textarea-wrapper">
+
+            <div class="input-icon textarea-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-9
+                  8.5 9.4 9.4 0 0 1-4-.9L3 21l1.9-4
+                  A8.38 8.38 0 0 1 3 11.5
+                  8.38 8.38 0 0 1 12 3
+                  a8.38 8.38 0 0 1 9 8.5Z"
+                ></path>
+              </svg>
+            </div>
+
+            <textarea
+              id="message"
+              name="message"
+              minlength="10"
+              maxlength="1000"
+              placeholder="Type your message here..."
+              required
+            ></textarea>
+
+            <span class="character-count">
+              <span id="charCount">0</span>/1000
+            </span>
+
+          </div>
+
+          <small
+            class="error-message"
+            id="messageError"
+          ></small>
+
+        </div>
+
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          class="submit-btn"
+          id="submitBtn"
+        >
+
+          <svg viewBox="0 0 24 24">
+            <path d="m22 2-7 20-4-9-9-4Z"></path>
+            <path d="M22 2 11 13"></path>
+          </svg>
+
+          <span>Submit Message</span>
+
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =====================================
+     VALIDATION CSS
+====================================== -->
+
+<style>
+
+.required {
+  color: #dc2626;
+}
+
+.error-message {
+  display: block;
+  min-height: 18px;
+  margin-top: 6px;
+  padding-left: 4px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #dc2626;
+}
+
+.input-wrapper.error,
+.textarea-wrapper.error,
+.select-wrapper.error {
+  border-color: #dc2626 !important;
+}
+
+.input-wrapper.success,
+.textarea-wrapper.success,
+.select-wrapper.success {
+  border-color: #16a34a !important;
+}
+
+.form-group input.error,
+.form-group textarea.error,
+.form-group select.error {
+  border-color: #dc2626 !important;
+}
+
+.form-group input.success,
+.form-group textarea.success,
+.form-group select.success {
+  border-color: #16a34a !important;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+</style>
+
+
+<!-- =====================================
+     VALIDATION JAVASCRIPT
+====================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.getElementById("contactForm");
+
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
+  const subject = document.getElementById("subject");
+  const department = document.getElementById("department");
+  const message = document.getElementById("message");
+
+  const charCount = document.getElementById("charCount");
+  const submitBtn = document.getElementById("submitBtn");
+
+
+  /* =====================================
+     HELPER FUNCTIONS
+  ====================================== */
+
+  function getWrapper(field) {
+
+    return field.closest(
+      ".input-wrapper, .textarea-wrapper, .select-wrapper"
+    );
+
+  }
+
+
+  function setError(field, errorId, message) {
+
+    const errorElement = document.getElementById(errorId);
+    const wrapper = getWrapper(field);
+
+    field.classList.remove("success");
+    field.classList.add("error");
+
+    if (wrapper) {
+      wrapper.classList.remove("success");
+      wrapper.classList.add("error");
+    }
+
+    errorElement.textContent = message;
+
+  }
+
+
+  function setSuccess(field, errorId) {
+
+    const errorElement = document.getElementById(errorId);
+    const wrapper = getWrapper(field);
+
+    field.classList.remove("error");
+    field.classList.add("success");
+
+    if (wrapper) {
+      wrapper.classList.remove("error");
+      wrapper.classList.add("success");
+    }
+
+    errorElement.textContent = "";
+
+  }
+
+
+  /* =====================================
+     NAME VALIDATION
+  ====================================== */
+
+  function validateName() {
+
+    const value = name.value.trim();
+
+    if (value === "") {
+
+      setError(
+        name,
+        "nameError",
+        "Please enter your name."
+      );
+
+      return false;
+
+    }
+
+    if (value.length < 2) {
+
+      setError(
+        name,
+        "nameError",
+        "Name must contain at least 2 characters."
+      );
+
+      return false;
+
+    }
+
+    const namePattern = /^[A-Za-zÀ-ÿ.'\-\s]+$/;
+
+    if (!namePattern.test(value)) {
+
+      setError(
+        name,
+        "nameError",
+        "Please enter a valid name."
+      );
+
+      return false;
+
+    }
+
+    setSuccess(name, "nameError");
+
+    return true;
+
+  }
+
+
+  /* =====================================
+     EMAIL VALIDATION
+  ====================================== */
+
+  function validateEmail() {
+
+    const value = email.value.trim();
+
+    if (value === "") {
+
+      setError(
+        email,
+        "emailError",
+        "Please enter your email address."
+      );
+
+      return false;
+
+    }
+
+    const emailPattern =
+      /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+    if (!emailPattern.test(value)) {
+
+      setError(
+        email,
+        "emailError",
+        "Please enter a valid email address."
+      );
+
+      return false;
+
+    }
+
+    setSuccess(email, "emailError");
+
+    return true;
+
+  }
+
+
+  /* =====================================
+     PHONE VALIDATION
+  ====================================== */
+
+  function validatePhone() {
+
+    const value = phone.value.trim();
+
+    if (value === "") {
+
+      setError(
+        phone,
+        "phoneError",
+        "Please enter your phone number."
+      );
+
+      return false;
+
+    }
+
+    /*
+      Examples accepted:
+
+      +971501234567
+      +971 50 123 4567
+      +91 9876543210
+      0501234567
+    */
+
+    const phonePattern =
+      /^\+?[0-9\s\-()]{7,20}$/;
+
+    if (!phonePattern.test(value)) {
+
+      setError(
+        phone,
+        "phoneError",
+        "Please enter a valid phone number."
+      );
+
+      return false;
+
+    }
+
+    setSuccess(phone, "phoneError");
+
+    return true;
+
+  }
+
+
+  /* =====================================
+     SUBJECT VALIDATION
+  ====================================== */
+
+  function validateSubject() {
+
+    const value = subject.value.trim();
+
+    if (value === "") {
+
+      setError(
+        subject,
+        "subjectError",
+        "Please enter a subject."
+      );
+
+      return false;
+
+    }
+
+    if (value.length < 3) {
+
+      setError(
+        subject,
+        "subjectError",
+        "Subject must contain at least 3 characters."
+      );
+
+      return false;
+
+    }
+
+    setSuccess(subject, "subjectError");
+
+    return true;
+
+  }
+
+
+  /* =====================================
+     DEPARTMENT VALIDATION
+  ====================================== */
+
+  function validateDepartment() {
+
+    if (department.value === "") {
+
+      setError(
+        department,
+        "departmentError",
+        "Please select a department."
+      );
+
+      return false;
+
+    }
+
+    setSuccess(
+      department,
+      "departmentError"
+    );
+
+    return true;
+
+  }
+
+
+  /* =====================================
+     MESSAGE VALIDATION
+  ====================================== */
+
+  function validateMessage() {
+
+    const value = message.value.trim();
+
+    if (value === "") {
+
+      setError(
+        message,
+        "messageError",
+        "Please enter your message."
+      );
+
+      return false;
+
+    }
+
+    if (value.length < 10) {
+
+      setError(
+        message,
+        "messageError",
+        "Message must contain at least 10 characters."
+      );
+
+      return false;
+
+    }
+
+    if (value.length > 1000) {
+
+      setError(
+        message,
+        "messageError",
+        "Message cannot exceed 1000 characters."
+      );
+
+      return false;
+
+    }
+
+    setSuccess(
+      message,
+      "messageError"
+    );
+
+    return true;
+
+  }
+
+
+  /* =====================================
+     CHARACTER COUNTER
+  ====================================== */
+
+  message.addEventListener("input", function () {
+
+    charCount.textContent = message.value.length;
+
+  });
+
+
+  /* =====================================
+     LIVE VALIDATION
+  ====================================== */
+
+  name.addEventListener("blur", validateName);
+
+  email.addEventListener("blur", validateEmail);
+
+  phone.addEventListener("blur", validatePhone);
+
+  subject.addEventListener("blur", validateSubject);
+
+  department.addEventListener(
+    "change",
+    validateDepartment
+  );
+
+  message.addEventListener(
+    "blur",
+    validateMessage
+  );
+
+
+  /* =====================================
+     REMOVE ERROR WHILE USER TYPES
+  ====================================== */
+
+  name.addEventListener("input", function () {
+
+    if (name.classList.contains("error")) {
+      validateName();
+    }
+
+  });
+
+
+  email.addEventListener("input", function () {
+
+    if (email.classList.contains("error")) {
+      validateEmail();
+    }
+
+  });
+
+
+  phone.addEventListener("input", function () {
+
+    if (phone.classList.contains("error")) {
+      validatePhone();
+    }
+
+  });
+
+
+  subject.addEventListener("input", function () {
+
+    if (subject.classList.contains("error")) {
+      validateSubject();
+    }
+
+  });
+
+
+  message.addEventListener("input", function () {
+
+    if (message.classList.contains("error")) {
+      validateMessage();
+    }
+
+  });
+
+
+  /* =====================================
+     FORM SUBMISSION
+  ====================================== */
+
+  form.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const validName = validateName();
+    const validEmail = validateEmail();
+    const validPhone = validatePhone();
+    const validSubject = validateSubject();
+    const validDepartment = validateDepartment();
+    const validMessage = validateMessage();
+
+
+    const isValid =
+      validName &&
+      validEmail &&
+      validPhone &&
+      validSubject &&
+      validDepartment &&
+      validMessage;
+
+
+    if (!isValid) {
+
+      const firstError =
+        form.querySelector(".error");
+
+      if (firstError) {
+        firstError.focus();
+      }
+
+      return;
+
+    }
+
+
+    /*
+      Everything is valid.
+
+      Submit the form to PHP.
+    */
+
+    submitBtn.disabled = true;
+
+    submitBtn.querySelector("span").textContent =
+      "Sending...";
+
+
+    form.submit();
+
+  });
+
+});
+
+</script>
