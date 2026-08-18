@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/global.css" />
-    <link rel="stylesheet" href="./assets/css/components.css" />
-    <link rel="stylesheet" href="./assets/css/about.css" />
+    <link rel="stylesheet" href="./assets/css/global.min.css" />
+    <link rel="stylesheet" href="./assets/css/components.min.css" />
+    <link rel="stylesheet" href="./assets/css/about.min.css" />
     <!-- aos library css  -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- aos script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
 
-    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/main.min.js" defer></script>
   </head>
   <body>
     <!-- Nav -->
@@ -47,9 +47,9 @@
 
               <ul>
                <li><a href="index.html">HOME</a></li>
-                <li><a href="./projects.html">Our Projects</a></li>
+                <li><a href="./projects.html">Projects</a></li>
                 <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="./about.html">About Al Habbai</a></li>
+                <li><a href="./about.html">About Us</a></li>
                 <li><a href="./awardsNews.html">Awards & News</a></li>
                 <li><a href="./principals.html">Principals</a></li>
                 <li><a href="./careers.html">Careers</a></li>
@@ -78,11 +78,16 @@
           </nav>
         </div>
       </div>
+      <div class="explore__btn__wrapper">
+        <a href="#about_link" class="explore__btn"
+          >About Us</a
+        >
+      </div>
     </header>
     <!-- Nav End -->
 
     <!-- about info -->
-    <section class="about-section">
+    <section id="about_link" class="about-section">
       <div class="container">
         <div class="about-container">
           <!-- LEFT CONTENT -->
@@ -157,7 +162,7 @@
             </div>
 
             <div class="ceo-name" data-aos="fade-down">
-              <h3>Mr. Ali AlHabbai</h3>
+              <h3>Mr. Ali Al Habbai</h3>
               <p>CEO</p>
             </div>
 
@@ -378,7 +383,9 @@
         />
       </svg>
 
-      <span class="scroll-arrow">↑</span>
+      <span class="scroll-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+      </span>
     </button>
 
     <!-- Footer Section -->
@@ -515,9 +522,9 @@
             <h3 class="footer__text__title">Quick Links</h3>
             <ol class="footer__text">
              <li><a href="index.html">HOME</a></li>
-              <li><a href="./projects.html">Our Projects</a></li>
+              <li><a href="./projects.html">Projects</a></li>
               <li><a href="./gallery.html">Gallery</a></li>
-              <li><a href="./about.html">About Al Habbai</a></li>
+              <li><a href="./about.html">About Us</a></li>
               <li><a href="./awardsNews.html">Awards & News</a></li>
               <li><a href="./principals.html">Principals</a></li>
               <li><a href="./careers.html">Careers</a></li>
